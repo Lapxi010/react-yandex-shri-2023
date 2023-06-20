@@ -1,0 +1,97 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    gap: 24px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.image {
+    width: 100px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+}
+
+.title {
+    font-family: 'SF Pro Text', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #1B1F23;
+}
+
+.genre {
+    font-family: 'SF Pro Text', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1B1F23;
+}
+
+.control {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    align-items: center;
+
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    height: max-content;
+}
+
+.counter_indicator {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #1B1F23;
+}
+
+.btn_counter {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF5500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn_counter:disabled {
+    opacity: 0.5;
+}
+
+.btn_delete {
+    display: flex;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 28px;
+}
