@@ -1,0 +1,26 @@
+.header {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #333333;
+    padding: 24px 32px;
+    top: 0;
+    z-index: 10;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+

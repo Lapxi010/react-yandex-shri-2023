@@ -10,9 +10,16 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   background: #F5F5F5;
   padding: 24px 32px;
+  flex: 1;
 }
 
 a {

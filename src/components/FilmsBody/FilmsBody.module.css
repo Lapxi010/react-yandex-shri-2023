@@ -1,0 +1,15 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 77.67%;
+    gap: 16px;
+}
+
+.empty {
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0 auto;
+}
