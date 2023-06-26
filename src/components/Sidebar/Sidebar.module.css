@@ -57,6 +57,10 @@
     border-radius: 8px;
 }
 
+.input:focus {
+    border: 1px solid #FF5500;
+}
+
 .input[type=text] {
     color: #1B1F23;
 }
