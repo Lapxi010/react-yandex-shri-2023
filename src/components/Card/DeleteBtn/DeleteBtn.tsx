@@ -1,10 +1,13 @@
 'use client'
 
-import styles from "./DeleteBtn.module.css";
-import Image from "next/image";
-import deleteImg from "../../../../public/deleteImg.svg";
-import React, {FC, useState} from "react";
-import {Modal} from "@/components/Modal/Modal";
+import {Modal} from '@/components/Modal/Modal';
+
+import Image from 'next/image';
+import React, {FC, useState} from 'react';
+
+import styles from './DeleteBtn.module.css';
+import deleteImg from '../../../../public/deleteImg.svg';
+
 
 export const DeleteBtn: FC<{ id: string }> = ({id}) => {
     const [active, setActive] = useState<boolean>(false)

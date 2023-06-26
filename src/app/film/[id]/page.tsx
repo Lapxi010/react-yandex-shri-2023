@@ -1,10 +1,12 @@
 'use client'
 
+import {Review} from '@/components/Review/Review';
+import {useGetMovieQuery, useGetReviewsQuery} from '@/redux/services/movieApi';
+import {FilmPageCard} from '@/components/FilmPageCard/FilmPageCard';
+import {Loader} from '@/components/Loader/Loader';
+import { translateGenre } from '@/utils/genreForFilms';
+
 import styles from './page.module.css'
-import {Review} from "@/app/film/[id]/Review/Review";
-import {useGetMovieQuery, useGetReviewsQuery} from "@/redux/services/movieApi";
-import {FilmPageCard} from "@/app/film/[id]/FilmPageCard/FilmPageCard";
-import {Loader} from "@/components/Loader/Loader";
 
 interface reviewT {
     id: string,
@@ -24,7 +26,7 @@ export default function Page({params}: { params: { id: string } }) {
                     title={movie?.title}
                     posterUrl={movie?.posterUrl}
                     description={movie?.description}
-                    genre={movie?.genre}
+                    genre={translateGenre(movie?.genre)}
                     rating={movie?.rating}
                     director={movie?.director}
                     id={movie?.id}

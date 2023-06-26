@@ -1,9 +1,11 @@
 'use client'
 
-import styles from './QuestionAnswerBlock.module.css'
 import Image from 'next/image'
-import arrow from '../../../../public/arrow.svg'
-import {FC, useState} from "react";
+import {FC, useState} from 'react';
+
+import styles from './QuestionAnswerBlock.module.css'
+import arrow from '../../../public/arrow.svg'
+
 
 interface QuestionAnswerBlockT {
     question: string,

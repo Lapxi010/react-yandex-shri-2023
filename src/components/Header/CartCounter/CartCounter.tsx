@@ -1,8 +1,10 @@
 'use client'
 
-import styles from "./CartCounter.module.css";
-import {selectAllAmountFilms} from "@/redux/cart/selector";
-import {useTypedSelector} from "@/hooks/UseTypedSelector";
+import {selectAllAmountFilms} from '@/redux/cart/selector';
+import {useTypedSelector} from '@/hooks/UseTypedSelector';
+
+import styles from './CartCounter.module.css';
+
 
 export const CartCounter = () => {
     const amount = useTypedSelector(state => selectAllAmountFilms(state))

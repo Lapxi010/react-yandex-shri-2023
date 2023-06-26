@@ -1,9 +1,11 @@
 'use client'
 
+import {FilmsBody} from '@/components/FilmsBody/FilmsBody';
+import {Sidebar} from '@/components/Sidebar/Sidebar';
+
+import {useState} from 'react';
+
 import styles from './page.module.css'
-import {FilmsBody} from "@/components/FilmsBody/FilmsBody";
-import {Sidebar} from "@/components/Sidebar/Sidebar";
-import {useState} from "react";
 
 export default function Home() {
     const [input, setInput] = useState<string>('')

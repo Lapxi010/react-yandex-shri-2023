@@ -1,9 +1,10 @@
 'use client'
 
+import {CardForCart} from '@/components/Card/Card';
+import {selectAllAmountFilms, selectAllIdFilms} from '@/redux/cart/selector';
+import {useTypedSelector} from '@/hooks/UseTypedSelector';
+
 import styles from './page.module.css';
-import {CardForCart} from "@/components/Card/Card";
-import {selectAllAmountFilms, selectAllIdFilms} from "@/redux/cart/selector";
-import {useTypedSelector} from "@/hooks/UseTypedSelector";
 
 export default function Page() {
     const ids = useTypedSelector(state => selectAllIdFilms(state))

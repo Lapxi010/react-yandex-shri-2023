@@ -1,11 +1,13 @@
 'use client'
 
-import styles from "./CustomSelect.module.css";
+import React, {ChangeEvent, FC, useEffect, useRef, useState} from 'react';
+import classNames from 'classnames';
+import {createPortal} from 'react-dom';
 import Image from 'next/image'
+
+import styles from './CustomSelect.module.css'
 import arrow from '../../../public/arrow.svg'
-import React, {ChangeEvent, FC, useEffect, useRef, useState} from "react";
-import classNames from "classnames";
-import {createPortal} from "react-dom";
+
 
 interface dataT {
     id: string,
@@ -50,7 +52,7 @@ export const CustomSelect: FC<CustomSelectT> = ({data, placeholder, setValue}) =
             className={classNames(styles.select, active ? styles.active : styles.notActive)}
         >
             <span
-                style={{color: text?.length > 0 ? "#1B1F23" : '#999FA6'}}
+                style={{color: text?.length > 0 ? '#1B1F23' : '#999FA6'}}
             >{text?.length > 0 ? text : placeholder}</span>
             <button
                 style={{transform: active ? 'rotate(180deg)' : 'rotate(0)'}}

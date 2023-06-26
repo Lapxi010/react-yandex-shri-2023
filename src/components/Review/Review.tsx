@@ -1,9 +1,10 @@
 'use client'
 
-import styles from './Review.module.css'
 import Image from 'next/image'
-import empty from '../../../../../public/empty.png'
-import {FC} from "react";
+import {FC} from 'react';
+
+import styles from './Review.module.css'
+import empty from '../../../public/empty.png'
 
 interface reviewT {
     name: string,

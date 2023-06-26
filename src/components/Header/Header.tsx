@@ -1,8 +1,10 @@
+import {CartCounter} from '@/components/Header/CartCounter/CartCounter';
+
 import Image from 'next/image'
+import Link from 'next/link';
+
 import styles from './Header.module.css'
 import basket from '../../../public/basket.svg';
-import Link from "next/link";
-import {CartCounter} from "@/components/Header/CartCounter/CartCounter";
 
 export const Header = () => {
     return (

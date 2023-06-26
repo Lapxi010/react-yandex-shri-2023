@@ -1,11 +1,14 @@
 'use client'
 
-import styles from "./FilmsBody.module.css";
-import {Card} from "@/components/Card/Card";
-import {useGetFilmsCinemaQuery} from "@/redux/services/movieApi";
-import {Loader} from "@/components/Loader/Loader";
-import {FC} from "react";
-import {translateGenre, findGenre} from "@/utils/genreForFilms";
+import {Card} from '@/components/Card/Card';
+import {useGetFilmsCinemaQuery} from '@/redux/services/movieApi';
+import {Loader} from '@/components/Loader/Loader';
+import {translateGenre, findGenre} from '@/utils/genreForFilms';
+
+import {FC} from 'react';
+
+import styles from './FilmsBody.module.css';
+
 
 interface CardT {
     title: string

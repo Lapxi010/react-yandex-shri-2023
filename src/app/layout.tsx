@@ -1,9 +1,11 @@
 import './globals.css'
-import {Inter, Roboto} from 'next/font/google'
-import {Header} from "@/components/Header/Header";
-import {Footer} from "@/components/Footer/Footer";
-import classNames from "classnames";
-import {StoreProvider} from "@/redux/storeProvider";
+
+import {Header} from '@/components/Header/Header';
+import {Footer} from '@/components/Footer/Footer';
+import {StoreProvider} from '@/redux/storeProvider';
+
+import {Inter, Roboto} from 'next/font/google';
+import classNames from 'classnames';
 
 const inter = Inter({subsets: ['latin']})
 
@@ -24,7 +26,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
+        <html lang='en'>
             <body className={classNames(inter.className, roboto.className)}>
                 <StoreProvider>
                     <Header/>

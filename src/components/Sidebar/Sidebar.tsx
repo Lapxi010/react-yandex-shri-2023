@@ -1,11 +1,14 @@
 'use client'
 
+import {CustomSelect} from '@/components/CustomSelect/CustomSelect';
+import {useGetCinemasQuery} from '@/redux/services/movieApi';
+import {Loader} from '@/components/Loader/Loader';
+import {genres} from '@/utils/genreForFilms';
+
+import {FC} from 'react';
+import { debounce } from 'lodash';
+
 import styles from './Sidebar.module.css'
-import {CustomSelect} from "@/components/CustomSelect/CustomSelect";
-import {useGetCinemasQuery} from "@/redux/services/movieApi";
-import {Loader} from "@/components/Loader/Loader";
-import {genres} from "@/utils/genreForFilms";
-import {FC} from "react";
 
 interface SidebarT {
     setInput: Function,
@@ -20,6 +23,8 @@ export const Sidebar: FC<SidebarT> = ({setInput, setGenre, setCinema}) => {
         return  <Loader/>
     }
 
+    const updateSearchValue = debounce((str: string) => { setInput(str) }, 300)
+
     return (
         <div className={styles.menu}>
             <span className={styles.title}>Фильтр поиска</span>
@@ -28,11 +33,9 @@ export const Sidebar: FC<SidebarT> = ({setInput, setGenre, setCinema}) => {
                     <label className={styles.label}>Название</label>
                     <input
                         className={styles.input}
-                        type="text"
+                        type='text'
                         placeholder={'Введите название'}
-                        onChange={(e) => {
-                            setInput(e.target.value)
-                        }}
+                        onChange={(e) => updateSearchValue(e.target.value)}
                     />
                 </div>
                 <div className={styles.block}>

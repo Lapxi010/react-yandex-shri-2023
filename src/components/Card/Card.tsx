@@ -1,14 +1,16 @@
 'use client'
 
-import styles from './Card.module.css'
-import Image from "next/image";
-import {Counter} from "@/components/Counter/Counter";
-import React, {FC} from "react";
-import {DeleteBtn} from "@/components/Card/DeleteBtn/DeleteBtn";
-import Link from "next/link";
-import {useGetMovieQuery} from "@/redux/services/movieApi";
+import {useGetMovieQuery} from '@/redux/services/movieApi';
 import {Loader} from '@/components/Loader/Loader'
-import {translateGenre} from "@/utils/genreForFilms";
+import {translateGenre} from '@/utils/genreForFilms';
+import {Counter} from '@/components/Counter/Counter';
+import {DeleteBtn} from '@/components/Card/DeleteBtn/DeleteBtn';
+
+import Image from 'next/image';
+import React, {FC} from 'react';
+import Link from 'next/link';
+
+import styles from './Card.module.css'
 
 interface CardT {
     title: string

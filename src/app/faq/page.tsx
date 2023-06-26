@@ -1,5 +1,6 @@
+import {QuestionAnswerBlock} from '@/components/QuestionAnswerBlock/QuestionAnswerBlock';
+
 import styles from './page.module.css'
-import {QuestionAnswerBlock} from "@/app/faq/QuestionAnswerBlock/QuestionAnswerBlock";
 
 interface mockT {
     question: string,
@@ -9,7 +10,7 @@ interface mockT {
 
 const mock: mockT[] = [{
     id: 'f289a4df-9800-4e42-b179-f76efd4a1432',
-    question: "Что такое Билетопоиск?",
+    question: 'Что такое Билетопоиск?',
     answer: 'Мы — крупнейший сервис о кино в рунете. На нем вы сможете посмотреть фильмы и сериалы, купить билеты в кино, узнать рейтинги популярных видео и интересные факты, поставить фильмам оценки, написать рецензии и дополнить описание фильмов.'
 },
     {

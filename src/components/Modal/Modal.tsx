@@ -1,12 +1,15 @@
 'use client'
 
-import styles from './Modal.module.css'
+import {cartActions} from '@/redux/cart';
+import {useTypedDispatch} from '@/hooks/UseTypedDispatch';
+
 import Image from 'next/image'
-import deleteImg from '../../../public/deleteImg.svg'
-import {FC} from "react";
-import {cartActions} from "@/redux/cart";
 import {createPortal} from "react-dom";
-import {useTypedDispatch} from "@/hooks/UseTypedDispatch";
+import {FC} from 'react';
+
+import styles from './Modal.module.css'
+import deleteImg from '../../../public/deleteImg.svg'
+
 
 interface ModalT {
     id: string,

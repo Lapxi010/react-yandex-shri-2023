@@ -1,15 +1,19 @@
 'use client'
 
+import {Modal} from '@/components/Modal/Modal';
+import {useTypedDispatch} from '@/hooks/UseTypedDispatch';
+import {useTypedSelector} from '@/hooks/UseTypedSelector';
+import {selectFilmAmount} from '@/redux/cart/selector';
+import {cartActions} from '@/redux/cart';
+
+import Image from 'next/image';
+import React, {FC, useState} from 'react';
+
 import styles from './Counter.module.css';
-import {cartActions} from "@/redux/cart";
-import Image from "next/image";
-import minus from "../../../public/minus.svg";
-import plus from "../../../public/plus.svg";
-import {selectFilmAmount} from "@/redux/cart/selector";
-import React, {FC, useState} from "react";
-import {Modal} from "@/components/Modal/Modal";
-import {useTypedDispatch} from "@/hooks/UseTypedDispatch";
-import {useTypedSelector} from "@/hooks/UseTypedSelector";
+import minus from '../../../public/minus.svg';
+import plus from '../../../public/plus.svg';
+
+
 
 interface CounterT {
     id: string,

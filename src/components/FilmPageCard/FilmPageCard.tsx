@@ -1,9 +1,10 @@
 'use client'
 
-import styles from "@/app/film/[id]/FilmPageCard/FilmPageCard.module.css";
-import Image from "next/image";
-import {Counter} from "@/components/Counter/Counter";
-import {FC} from "react";
+import {Counter} from '@/components/Counter/Counter';
+import styles from '@/components/FilmPageCard/FilmPageCard.module.css';
+
+import Image from 'next/image';
+import {FC} from 'react';
 
 interface FilmPageCardT {
     title: string,
